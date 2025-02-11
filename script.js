@@ -27,7 +27,7 @@ Promise.all([p1,p2,p3]).then((values) => {
 		let td1 = document.createElement("td")
 		td1.innerText = `Promise ${i+1}`
 		let td2 = document.createElement("td")
-		td2.innerText = values[i]
+		td2.innerText = values[i].toFixed(3)
 		tr.append(td1,td2)
 	}
 	let tr = document.createElement("tr")
@@ -35,6 +35,6 @@ Promise.all([p1,p2,p3]).then((values) => {
 	let td1 = document.createElement("td")
 	td1.innerText = "Total"
 	let td2 = document.createElement("td")
-	td2.innerText = Math.max(...values)
+	td2.innerText = Math.max(...values).toFixed(3)
 	tr.append(td1,td2)
 })
